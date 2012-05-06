@@ -1,0 +1,8 @@
+" add jbuilder syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
+" strip whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Autoload Pathgen
+call pathogen#infect()
