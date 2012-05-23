@@ -22,21 +22,19 @@ ZSH_THEME="sudojosh"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-alias t=timetrap_t
-alias gs="git status"
+alias gs="git status -sb"
 json() { cat "$*" | python -mjson.tool }
+jump() { cd "$HOME/Sites/$*" }
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm github rails3 git-flow rails ruby)
+plugins=(git rvm github rails3 rails ruby)
 
 source $ZSH/oh-my-zsh.sh
-
-# See https://github.com/mattt/Postgres-for-Mac/issues/7
-DYLD_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib
+alias gst="git status -sb"
 
 # Customize to your needs...
-export PATH=/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
 
 [[ -s "/Users/josh/.rvm/scripts/rvm" ]] && source "/Users/josh/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
