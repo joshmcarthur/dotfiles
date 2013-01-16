@@ -23,15 +23,16 @@ ZSH_THEME="sudojosh"
 # COMPLETION_WAITING_DOTS="true"
 
 alias gs="git status -sb"
+alias s="python -m SimpleHTTPServer"
 json() { cat "$*" | python -mjson.tool }
-jump() { cd "$HOME/Sites/$*" }
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm github rails3 rails ruby)
+plugins=(git rvm github rails3 rails ruby autojump bundler)
 
 source $ZSH/oh-my-zsh.sh
 alias gst="git status -sb"
+alias gch="git checkout -b"
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
@@ -39,5 +40,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X1
 [[ -s "/Users/josh/.rvm/scripts/rvm" ]] && source "/Users/josh/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/usr/local/heroku/bin:$PATH"
 
 
+export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem

@@ -1,0 +1,8 @@
+[user]
+	name = Josh McArthur
+	email = joshua.mcarthur@gmail.com
+[core]
+	editor = subl -n -w
+	excludesfile = /Users/josh/.gitignore_global
+[color]
+	ui = true

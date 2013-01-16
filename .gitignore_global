@@ -1,0 +1,4 @@
+.bundle
+.rvmrc
+config/database.yml
+.DS_Store
