@@ -1,4 +1,7 @@
 .bundle
+/bin/
 .rvmrc
 config/database.yml
 .DS_Store
+.rbenv-gemsets
+.ruby-version

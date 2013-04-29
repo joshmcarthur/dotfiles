@@ -1,7 +1,7 @@
 
-local user='%{$fg_bold[green]%}%n@%{$fg_bold[green]%}%m%{$reset_color%}'
-local pwd='%{$fg_bold[blue]%}%~%{$reset_color%}'
-local rvm='%{$fg[green]%}($(rvm-prompt i v g))%{$reset_color%}'
+local user='%{$fg_bold[green]%}%m%{$reset_color%}'
+local pwd='%{$fg_bold[blue]%}➤ %c $ %{$reset_color%}'
+local rbenv='%{$fg[green]%}($(rbenv version-name))%{$reset_color%}'
 local return_code='%(?..%{$fg[red]%}%? ↵%{$reset_color%})'
 local git_branch='$(git_prompt_status)%{$reset_color%}$(git_prompt_info)%{$reset_color%}'
 
@@ -17,6 +17,6 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 
-PROMPT="${user} ${pwd}$ "
-RPROMPT="${return_code} ${git_branch} ${rvm}"
+PROMPT="${user} ${pwd}"
+RPROMPT="${return_code} ${git_branch} ${rbenv}"
 

@@ -34,13 +34,15 @@ source $ZSH/oh-my-zsh.sh
 alias gst="git status -sb"
 alias gch="git checkout -b"
 
+alias ip="ipconfig getifaddr en0"
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/Applications/MAMP/bin/php/php5.4.10/bin:$PATH"
 
-[[ -s "/Users/josh/.rvm/scripts/rvm" ]] && source "/Users/josh/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH="/usr/local/heroku/bin:$PATH"
 
 
 export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
