@@ -4,4 +4,5 @@
 config/database.yml
 .DS_Store
 .rbenv-gemsets
+.rbenv_gemsets
 .ruby-version

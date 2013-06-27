@@ -3,6 +3,10 @@
 	email = joshua.mcarthur@gmail.com
 [core]
 	editor = subl -n -w
-	excludesfile = /Users/josh/.gitignore_global
+	excludesfile = /Users/josh/.dotfiles/.gitignore_global
+	excludesfile = /Users/josh/.dotfiles/.gitignore_global
 [color]
 	ui = true
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential

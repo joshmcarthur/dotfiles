@@ -28,7 +28,7 @@ json() { cat "$*" | python -mjson.tool }
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm github rails3 rails ruby autojump bundler)
+plugins=(git rvm github rails3 rails4 rails ruby autojump bundler)
 
 source $ZSH/oh-my-zsh.sh
 alias gst="git status -sb"
@@ -41,8 +41,9 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X1
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/Applications/MAMP/bin/php/php5.4.10/bin:$PATH"
 
+export SSL_CERT_FILE=/opt/boxen/homebrew/opt/curl-ca-bundle/share/ca-bundle.crt
 
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
-export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
