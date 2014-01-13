@@ -28,7 +28,7 @@ json() { cat "$*" | python -mjson.tool }
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm github rails3 rails4 rails ruby autojump bundler)
+plugins=(git rvm github rails ruby autojump bundler)
 
 source $ZSH/oh-my-zsh.sh
 alias gst="git status -sb"
@@ -36,14 +36,40 @@ alias gch="git checkout -b"
 
 alias ip="ipconfig getifaddr en0"
 
+consumer_release() {
+  current_branch=`git symbolic-ref HEAD --short`
+  git checkout future-release
+  git merge $current_branch
+  rake db:migrate:reset
+  git add db/schema.rb
+  git commit -a
+  git pull origin future-release
+  git push origin future-release
+  cap staging deploy:migrations
+  git checkout $current_branch
+}
+
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/Applications/MAMP/bin/php/php5.4.10/bin:$PATH"
 
-export SSL_CERT_FILE=/opt/boxen/homebrew/opt/curl-ca-bundle/share/ca-bundle.crt
+# Go
+export GOPATH="/usr/local/var/go"
+export PATH=$PATH:$GOPATH/bin
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# added by travis gem
+source /Users/josh/.travis/travis.sh
+  export ANDROID_HOME=/usr/local/opt/android-sdk
+export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+
+source ~/.zshenv
+
+bindkey -v
