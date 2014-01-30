@@ -36,20 +36,6 @@ alias gch="git checkout -b"
 
 alias ip="ipconfig getifaddr en0"
 
-consumer_release() {
-  current_branch=`git symbolic-ref HEAD --short`
-  git checkout future-release
-  git merge $current_branch
-  rake db:migrate:reset
-  git add db/schema.rb
-  git commit -a
-  git pull origin future-release
-  git push origin future-release
-  cap staging deploy:migrations
-  git checkout $current_branch
-}
-
-
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -72,4 +58,3 @@ export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Hom
 
 source ~/.zshenv
 
-bindkey -v
