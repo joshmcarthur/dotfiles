@@ -31,7 +31,7 @@ ln -sf .gemrc ~/.gemrc &&\
 ln -sf .gitconfig ~/.gitconfig &&\
 ln -sf .gitignore_global ~/.gitignore_global &&\
 ln -sf .irbrc ~/.irbrc &&\
-ln -sf .zshrc ~/.zshrc &&\
+ln -sf .zshrc ~/.zshrc
 ```
 
 This will set up preferences for Bundler, Rubygems, IRB, Git, and ZSH.
