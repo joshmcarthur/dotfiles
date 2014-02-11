@@ -1,15 +1,37 @@
 dotfiles
 ========
 
-A backup of my dotfiles
+A copy of my dotfiles, including configuration, tools to help with restoration, and helpful utilities. Feel free to fork and use for your own needs.
 
+## Use
 
-##### Tools I use:
+First of all, make sure Homebrew and brew-cask is installed:
 
-* [iTerm 2](http://www.iterm2.com/)
-* [RVM](http://rvm.beginrescueend.com)
-* [ZSH](http://www.zsh.org/)
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* MacVIM (from [@alloy's fork of MacVIM](https://github.com/alloy/macvim))
-* [Janus](https://github.com/carlhuda/janus)
-* [Pathogen](https://github.com/tpope/vim-pathogen)
+* `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+* `brew tap phinze/cask`
+* `brew install brew-cask`
+
+Then install Homebrew system tools:
+
+```
+cat homebrew_installed | xargs -n1 brew install
+```
+
+Then install Applications using Cask:
+
+```
+cat homebrew_cask_installed | xargs -n1 brew cask install
+```
+
+After that, you'll have a bunch of system tools and applications installed. The only thing left to do is to symlink the configuration files into place so that further updates to them will be reflected in this repository: 
+
+``` bash
+ln -sf .bundle ~/.bundle &&\
+ln -sf .gemrc ~/.gemrc &&\
+ln -sf .gitconfig ~/.gitconfig &&\
+ln -sf .gitignore_global ~/.gitignore_global &&\
+ln -sf .irbrc ~/.irbrc &&\
+ln -sf .zshrc ~/.zshrc &&\
+```
+
+This will set up preferences for Bundler, Rubygems, IRB, Git, and ZSH.
