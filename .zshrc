@@ -34,7 +34,6 @@ source $ZSH/oh-my-zsh.sh
 alias gst="git status -sb"
 alias gch="git checkout -b"
 
-alias ip="ipconfig getifaddr en0"
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin

@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# Print our current IP address to the terminal.
+#
+# From https://github.com/joshmcarthur/dotfiles/blob/master/bin/ip
+#
+# Often an IP address may be required to bind to an interface,
+# manage some configuration, connect to services etc.
+#
+# If you move between many networks, then your IP is something that
+# might be quite unknown to you - this command provides a simple
+# way of discovering what your current IP is.
+#
+# This tool is especially handy if you work in a team environment where
+# you might be a co-worker to check out your copy of an application to
+# help diagnose an issue, etc.
+
+ip=`ipconfig getifaddr en0`
+echo $ip
