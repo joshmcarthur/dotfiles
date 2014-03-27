@@ -23,15 +23,16 @@ Then install Applications using Cask:
 cat homebrew_cask_installed | xargs -n1 brew cask install
 ```
 
-After that, you'll have a bunch of system tools and applications installed. The only thing left to do is to symlink the configuration files into place so that further updates to them will be reflected in this repository: 
+After that, you'll have a bunch of system tools and applications installed. The only thing left to do is to symlink the configuration files into place so that further updates to them will be reflected in this repository:
 
 ``` bash
-ln -sf .bundle ~/.bundle &&\
-ln -sf .gemrc ~/.gemrc &&\
-ln -sf .gitconfig ~/.gitconfig &&\
-ln -sf .gitignore_global ~/.gitignore_global &&\
-ln -sf .irbrc ~/.irbrc &&\
-ln -sf .zshrc ~/.zshrc
+ln -sf ~/.dotfiles/.bundle ~/.bundle &&\
+ln -sf ~/.dotfiles/.gemrc ~/.gemrc &&\
+ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig &&\
+ln -sf ~/.dotfiles/.gitignore_global ~/.gitignore_global &&\
+ln -sf ~/.dotfiles/.irbrc ~/.irbrc &&\
+ln -sf ~/.dotfiles/.zshrc ~/.zshrc
+ln -sf "~/.dotfiles/Sublime Text 3 Preferences/" "~/Library/Application Support/Sublime Text 3/Packages/User"
 ```
 
 This will set up preferences for Bundler, Rubygems, IRB, Git, and ZSH.
