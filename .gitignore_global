@@ -1,6 +1,5 @@
 .bundle
 .rvmrc
-config/database.yml
 .DS_Store
 .rbenv-gemsets
 .rbenv_gemsets
