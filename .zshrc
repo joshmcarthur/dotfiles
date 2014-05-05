@@ -43,18 +43,16 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
 # Go
-export GOPATH="/usr/local/var/go"
+export GOPATH="$HOME/Code/"
 export PATH=$PATH:$GOPATH/bin
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+[[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
 
-# added by travis gem
-source /Users/josh/.travis/travis.sh
-  export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=/usr/local/opt/android-sdk
 export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
 source ~/.zshenv
