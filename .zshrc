@@ -46,7 +46,7 @@ export PATH="$HOME/.dotfiles/bin:$PATH"
 export GOPATH="$HOME/Code/"
 export PATH=$PATH:$GOPATH/bin
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
+export ATOM_PATH=~/Applications
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 
