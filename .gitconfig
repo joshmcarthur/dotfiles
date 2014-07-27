@@ -2,7 +2,7 @@
 	name = Josh McArthur
 	email = joshua.mcarthur@gmail.com
 [core]
-	editor = subl -n -w
+	editor = atom
 	excludesfile = /Users/josh/.dotfiles/.gitignore_global
 	excludesfile = /Users/josh/.dotfiles/.gitignore_global
 [color]
