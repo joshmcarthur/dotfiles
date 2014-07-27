@@ -2,6 +2,7 @@
 	"installed_packages":
 	[
 		"Base16 Color Schemes",
+		"Better CoffeeScript",
 		"Cucumber",
 		"Dockerfile Syntax Highlighting",
 		"Emmet",
@@ -9,6 +10,7 @@
 		"nginx",
 		"Origami",
 		"Railscasts Extended",
+		"RSpec",
 		"Sass",
 		"Theme - Spacegray",
 		"TomDoc"
