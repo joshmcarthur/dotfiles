@@ -1,0 +1,3 @@
+[submodule "monokai-iterm"]
+	path = monokai-iterm
+	url = https://github.com/dawnerd/monokai-iterm.git
