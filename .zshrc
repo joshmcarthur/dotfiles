@@ -38,6 +38,7 @@ alias gch="git checkout -b"
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 # My own scripts
 export PATH="$HOME/.dotfiles/bin:$PATH"
