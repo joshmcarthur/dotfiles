@@ -1,3 +1,4 @@
+ack
 android-sdk
 ant
 apktool
@@ -5,7 +6,9 @@ apple-gcc42
 autoconf
 autojump
 automake
+awscli
 brew-cask
+cscope
 curl-ca-bundle
 docker
 freetds
@@ -31,6 +34,7 @@ libpng
 libtiff
 libtool
 lzlib
+macvim
 nmap
 node
 openssl
@@ -48,4 +52,5 @@ s3cmd
 sqlite
 ssh-copy-id
 unar
+xz
 zsh
