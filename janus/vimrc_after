@@ -1,0 +1,28 @@
+colorscheme monokai
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+" Automatically strip trailing whitespace on save on all files
+" autocmd BufWritePre *.* :call Preserve("%s/\\s\\+$//e")
+
+let g:airline_enable_syntastic=1
+set smartindent
+set autoindent
+set number
+
+" change the theme (available options: dark, light, simple, badwolf)
+let g:airline_theme='dark'
+
+set t_Co=256 " turn on 256 colors in terminal
+set background=dark
+
+
+set wildignore+=node_modules/** " for node projects
+set wildignore+=bower_components/** " for front-end projects
+set wildignore+=tmp/** " for rails projects
+set wildignore+=.git " ignore git repo
+set wildignore+=*.jpg,*.png,*.o,*.pdf,*.gif,Thumbs.db,*.sqlite3 " ignore common binary files
+
+set mouse=a
