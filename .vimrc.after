@@ -4,6 +4,9 @@ colorscheme monokai
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
+" Treat all numerals as decimal (even if they are padded with zeroes)
+set nrformats=
+
 " Automatically strip trailing whitespace on save on all files
 autocmd BufWritePre * :%s/\s\+$//e
 
