@@ -23,6 +23,7 @@ let g:airline_theme='dark'
 
 set t_Co=256 " turn on 256 colors in terminal
 set background=dark
+colorscheme base16-monokai
 
 
 set wildignore+=node_modules/** " for node projects
