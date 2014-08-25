@@ -52,13 +52,17 @@ Then install janus:
 After that, you'll have a bunch of system tools and applications installed. The only thing left to do is to symlink the configuration files into place so that further updates to them will be reflected in this repository:
 
 ``` bash
-ln -sf ~/.dotfiles/.bundle ~/.bundle &&\
-ln -sf ~/.dotfiles/.gemrc ~/.gemrc &&\
-ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig &&\
-ln -sf ~/.dotfiles/.gitignore_global ~/.gitignore_global &&\
-ln -sf ~/.dotfiles/.irbrc ~/.irbrc &&\
-ln -sf ~/.dotfiles/.zshrc ~/.zshrc
-ln -sf "~/.dotfiles/Sublime Text 3 Preferences/" "~/Library/Application Support/Sublime Text 3/Packages/User"
+ln -sf ~/.dotfiles/ruby/bundle-config ~/.bundle &&\
+ln -sf ~/.dotfiles/ruby/gemrc ~/.gemrc &&\
+ln -sf ~/.dotfiles/git/gitconfig ~/.gitconfig &&\
+ln -sf ~/.dotfiles/git/gitignore_global ~/.gitignore_global &&\
+ln -sf ~/.dotfiles/ruby/irbrc ~/.irbrc &&\
+ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc &&\
+ln -sf ~/.dotfiles/zsh/zshenv ~/.zshenv &&\
+ln -sf ~/.dotfiles/zsh/sudojosh.zsh-theme ~/.oh-my-zsh/themes/sudojosh.zsh-theme &&\
+ln -sf ~/.dotfiles/vim/gvimrc.after ~/.gvimrc.after &&\
+ln -sf ~/.dotfiles/vim/.vimrc.after ~/.vimrc.after &&\
+ln -sf ~/.dotfiles/vim/.vimrc.before ~/.vimrc.before
 ```
 
-This will set up preferences for Bundler, Rubygems, IRB, Git, and ZSH.
+This will set up preferences for Bundler, Rubygems, IRB, Git, VIM, and ZSH, and will install my custom ZSH theme.
