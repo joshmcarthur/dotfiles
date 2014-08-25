@@ -5,7 +5,14 @@ A copy of my dotfiles, including configuration, tools to help with restoration, 
 
 ## Use
 
-First of all, make sure Homebrew and brew-cask is installed:
+Clone the repository, including submodules:
+
+``` git
+   git clone --recursive git://github.com/joshmcarthur/dotfiles.git 
+```
+
+
+Next, make sure Homebrew and brew-cask is installed:
 
 * `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 * `brew tap phinze/cask`
