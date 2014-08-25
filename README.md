@@ -30,6 +30,25 @@ Then install Applications using Cask:
 cat homebrew_cask_installed | xargs -n1 brew cask install
 ```
 
+Then install oh-my-zsh:
+
+``` bash
+  curl -L http://install.ohmyz.sh | sh
+```
+
+(You can find manual install instructions in the [README](https://github.com/robbyrussell/oh-my-zsh) if you'd prefer)
+
+Then install janus:
+
+``` bash
+  curl -Lo- https://bit.ly/janus-bootstrap | bash
+```
+
+(Same as oh-my-zsh, you can find manual install instructions in the [README](https://github.com/carlhuda/janus))
+
+---
+
+
 After that, you'll have a bunch of system tools and applications installed. The only thing left to do is to symlink the configuration files into place so that further updates to them will be reflected in this repository:
 
 ``` bash
