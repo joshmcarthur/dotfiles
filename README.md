@@ -62,7 +62,8 @@ ln -sf ~/.dotfiles/zsh/zshenv ~/.zshenv &&\
 ln -sf ~/.dotfiles/zsh/sudojosh.zsh-theme ~/.oh-my-zsh/themes/sudojosh.zsh-theme &&\
 ln -sf ~/.dotfiles/vim/gvimrc.after ~/.gvimrc.after &&\
 ln -sf ~/.dotfiles/vim/.vimrc.after ~/.vimrc.after &&\
-ln -sf ~/.dotfiles/vim/.vimrc.before ~/.vimrc.before
+ln -sf ~/.dotfiles/vim/.vimrc.before ~/.vimrc.before &&\
+ln -sf ~/.dotfiles/vim/plugins ~/.janus
 ```
 
 This will set up preferences for Bundler, Rubygems, IRB, Git, VIM, and ZSH, and will install my custom ZSH theme.
