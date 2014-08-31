@@ -66,4 +66,11 @@ ln -sf ~/.dotfiles/vim/.vimrc.before ~/.vimrc.before &&\
 ln -sf ~/.dotfiles/vim/plugins ~/.janus
 ```
 
+For you convenience, there is a script which performs the above steps for you - simply execute:
+
+``` bash
+./install.sh
+```
+
+
 This will set up preferences for Bundler, Rubygems, IRB, Git, VIM, and ZSH, and will install my custom ZSH theme.
