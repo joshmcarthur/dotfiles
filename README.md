@@ -38,13 +38,6 @@ Then install oh-my-zsh:
 
 (You can find manual install instructions in the [README](https://github.com/robbyrussell/oh-my-zsh) if you'd prefer)
 
-Then install janus:
-
-``` bash
-  curl -Lo- https://bit.ly/janus-bootstrap | bash
-```
-
-(Same as oh-my-zsh, you can find manual install instructions in the [README](https://github.com/carlhuda/janus))
 
 ---
 
@@ -60,10 +53,9 @@ ln -sf ~/.dotfiles/ruby/irbrc ~/.irbrc &&\
 ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc &&\
 ln -sf ~/.dotfiles/zsh/zshenv ~/.zshenv &&\
 ln -sf ~/.dotfiles/zsh/sudojosh.zsh-theme ~/.oh-my-zsh/themes/sudojosh.zsh-theme &&\
-ln -sf ~/.dotfiles/vim/gvimrc.after ~/.gvimrc.after &&\
-ln -sf ~/.dotfiles/vim/.vimrc.after ~/.vimrc.after &&\
-ln -sf ~/.dotfiles/vim/.vimrc.before ~/.vimrc.before &&\
-ln -sf ~/.dotfiles/vim/plugins ~/.janus
+ln -sf ~/.dotfiles/vim/gvimrc ~/.gvimrc &&\
+ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc &&\
+ln -sf ~/.dotfiles/vim/plugins ~/.vim/plugins
 ```
 
 For you convenience, there is a script which performs the above steps for you - simply execute:
