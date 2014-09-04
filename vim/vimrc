@@ -1,0 +1,86 @@
+set laststatus=2
+runtime plugins/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect('plugins/{}')
+
+" Relative Numbering
+" =======
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+" Formatting and Filetype Fixes
+" =====
+
+" Treat all numerals as decimal (even if they are padded with zeroes)
+set nrformats=
+
+" add jbuilder syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
+" Automatically strip trailing whitespace on save on all files
+autocmd BufWritePre * :%s/\s\+$//e
+
+ " Remember last location in file, but not for commit messages.
+ "   " see :help last-position-jump
+ au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
+     \| exe "normal! g`\"" | endif
+
+" Use unix line endings and encode files as UTF-8
+set encoding=utf-8
+set fileformat=unix
+
+" VIM Settings
+" ====
+set smartindent
+set autoindent
+set number
+set ruler
+set mouse=a
+set cursorline
+syntax on
+set backspace=indent,eol,start
+
+" Get rid of the delay when hitting esc!
+set noesckeys
+
+" Automatically reread files that have been changed externally
+set autoread
+
+" Airline Settings
+" ====
+let g:airline_theme='dark'
+let g:airline_enable_syntastic=1
+
+" ColorScheme Settings
+" ====
+set t_Co=256 " turn on 256 colors in terminal
+set background=dark
+colorscheme base16-monokai
+
+" Ignore File settings
+" ===
+set wildignore+=node_modules/** " for node projects
+set wildignore+=bower_components/** " for front-end projects
+set wildignore+=tmp/** " for rails projects
+set wildignore+=.git " ignore git repo
+set wildignore+=*.jpg,*.png,*.o,*.pdf,*.gif,Thumbs.db,*.sqlite3 " ignore common binary files
+
+" set tab and indents
+" ===================
+ set shiftwidth=2 " how many spaces autoindent should use when shifting in/out e.g. with << or >>
+set softtabstop=2 " how many spaces to insert when you type 'Tab' character  while editing
+set tabstop=2 " how many spaces to insert when you type 'Tab'
+set shiftround " round shifts to the nearest shiftwidth. Used by < and >" commands
+set expandtab " when the user types 'Tab' we really insert spaces
+
+
+" List chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+"                                   " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is off
+
+set nocompatible
