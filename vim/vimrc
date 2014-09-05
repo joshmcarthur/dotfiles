@@ -41,6 +41,9 @@ set cursorline
 syntax on
 set backspace=indent,eol,start
 
+" Set swap directory outside project folders
+set directory=~/.vim/swap//
+
 " Get rid of the delay when hitting esc!
 set noesckeys
 
