@@ -28,3 +28,6 @@
 [submodule "vim/plugins/vim-haml"]
 	path = vim/plugins/vim-haml
 	url = https://github.com/tpope/vim-haml.git
+[submodule "vim/plugins/vim-mustache-handlebars"]
+	path = vim/plugins/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars
