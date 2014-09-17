@@ -3,8 +3,7 @@
 	email = joshua.mcarthur@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/josh/.dotfiles/.gitignore_global
-	excludesfile = /Users/josh/.dotfiles/.gitignore_global
+	excludesfile = /Users/josh/.dotfiles/git/gitignore_global
 [color]
 	ui = true
 
@@ -12,3 +11,5 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[diff]
+	tool = vimdif
