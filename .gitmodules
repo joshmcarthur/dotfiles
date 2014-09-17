@@ -31,3 +31,9 @@
 [submodule "vim/plugins/vim-mustache-handlebars"]
 	path = vim/plugins/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars
+[submodule "vim/plugins/vim-coffee-script"]
+	path = vim/plugins/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/plugins/vim-go"]
+	path = vim/plugins/vim-go
+	url = https://github.com/fatih/vim-go.git
