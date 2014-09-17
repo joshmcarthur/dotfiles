@@ -18,6 +18,9 @@ set nrformats=
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
+" Highlight JSON as JS
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 " Automatically strip trailing whitespace on save on all files
 autocmd BufWritePre * :%s/\s\+$//e
 
