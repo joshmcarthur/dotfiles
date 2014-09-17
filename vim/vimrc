@@ -35,8 +35,8 @@ set fileformat=unix
 
 " VIM Settings
 " ====
-set smartindent
 set autoindent
+filetype plugin indent on
 set number
 set ruler
 set mouse=a
