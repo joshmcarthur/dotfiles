@@ -50,6 +50,8 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 export EDITOR=vim
 
+# Set my editor to vim
+export EDITOR=vim
 
 [[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
 
