@@ -37,3 +37,6 @@
 [submodule "vim/plugins/vim-go"]
 	path = vim/plugins/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "osx/osx-for-hackers"]
+	path = osx/osx-for-hackers
+	url = git@gist.github.com:/f4abb7072475c4c96047.git
