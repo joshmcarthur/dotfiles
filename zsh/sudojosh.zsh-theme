@@ -1,6 +1,6 @@
 
-local user='%{$fg[green]%}%m%{$reset_color%}'
-local pwd='%{$fg[blue]%}➤ %c $ %{$reset_color%}'
+local user='%{$fg[green]%}➤%{$reset_color%}'
+local pwd='%{$fg[blue]%}%c $ %{$reset_color%}'
 local rbenv='%{$fg[green]%}($(rbenv version-name))%{$reset_color%}'
 local return_code='%(?..%{$fg[red]%}%? ↵%{$reset_color%})'
 local git_branch='$(git_prompt_status)%{$reset_color%}$(git_prompt_info)%{$reset_color%}'
