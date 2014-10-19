@@ -2,7 +2,6 @@ ack
 android-sdk
 ant
 apktool
-apple-gcc42
 autoconf
 autojump
 automake
@@ -10,7 +9,6 @@ awscli
 brew-cask
 cscope
 docker
-freetds
 freetype
 freexl
 gdbm
@@ -24,7 +22,6 @@ gpp
 gradle
 heroku-toolbelt
 ievms
-imagemagick
 jpeg
 json-c
 keybase
@@ -35,20 +32,18 @@ libtiff
 libtool
 lzlib
 macvim
-nmap
+makedepend
 node
 openssl
 ossp-uuid
 pandoc
 pcre
-phantomjs
 pkg-config
 proj
 rbenv
 readline
 redis
 ruby-build
-s3cmd
 sqlite
 ssh-copy-id
 unar
