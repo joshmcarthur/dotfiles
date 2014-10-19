@@ -9,7 +9,6 @@ automake
 awscli
 brew-cask
 cscope
-curl-ca-bundle
 docker
 freetds
 freetype
