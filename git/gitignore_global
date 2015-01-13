@@ -5,3 +5,8 @@
 .rbenv_gemsets
 .ruby-version
 .chef
+.gradle
+.idea
+.iml
+.iml
+*.iml
