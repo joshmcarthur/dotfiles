@@ -41,6 +41,9 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X1
 # Path to Heroku tools
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Path to Chef Development Kit
+export PATH="/opt/chefdk/bin:$PATH"
+
 # Path to Postgres.app
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
