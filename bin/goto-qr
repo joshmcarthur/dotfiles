@@ -1,0 +1,15 @@
+#!/bin/bash
+# Build a QR code pointing to this machine's IP address and a port.
+# Useful for getting to an address on a mobile quickly.
+
+PORT="$1"
+
+if [ -z "$PORT" ]
+  then
+    echo "Port is required!"
+    echo "Example usage: goto-qr 3000"
+    exit 1
+fi
+
+ADDR=`ip`
+qrcode-terminal "http://$ADDR:$PORT"
