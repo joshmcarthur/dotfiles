@@ -11,6 +11,8 @@ brew-cask
 chruby
 cscope
 docker
+faac
+ffmpeg
 freetype
 freexl
 gdbm
@@ -28,11 +30,16 @@ jmeter
 jpeg
 json-c
 keybase
+lame
 libevent
 libgeotiff
+libogg
 libpng
 libtiff
 libtool
+libvo-aacenc
+libvorbis
+libvpx
 lzlib
 makedepend
 node
@@ -47,6 +54,10 @@ redis
 ruby-install
 sqlite
 ssh-copy-id
+theora
 unar
+webp
+x264
+xvid
 xz
 zsh
