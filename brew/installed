@@ -8,6 +8,7 @@ autojump
 automake
 awscli
 brew-cask
+chruby
 cscope
 docker
 freetype
@@ -40,10 +41,9 @@ pandoc
 pcre
 pkg-config
 proj
-rbenv
 readline
 redis
-ruby-build
+ruby-install
 sqlite
 ssh-copy-id
 unar
