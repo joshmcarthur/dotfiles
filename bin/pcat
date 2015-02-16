@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# pcat - 'Pretty cat' or 'Pygments cat' or something like that.
+# Requires pygments to be installed - `pip install Pygments` or
+# see the instructions at http://pygments.org/download/
+
+file="$1"
+style="vim"
+formatter="terminal256"
+
+cat $file | pygmentize -f $formatter -O full,style=$style
