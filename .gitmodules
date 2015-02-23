@@ -43,3 +43,6 @@
 [submodule "vim/plugins/ag"]
 	path = vim/plugins/ag
 	url = https://github.com/rking/ag.vim
+[submodule "vim/plugins/vim-eunuch"]
+	path = vim/plugins/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
