@@ -43,3 +43,6 @@
 [submodule "vim/plugins/ag"]
 	path = vim/plugins/ag
 	url = https://github.com/rking/ag.vim
+[submodule "vim/plugins/rename.vim"]
+	path = vim/plugins/rename.vim
+	url = https://github.com/danro/rename.vim
