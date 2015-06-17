@@ -4,10 +4,11 @@ execute pathogen#infect('plugins/{}')
 
 " Relative Numbering
 " =======
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+":au FocusLost * :set number
+":au FocusGained * :set relativenumber
+"autocmd InsertEnter * :set number
+"autocmd InsertLeave * :set relativenumber
+set relativenumber
 
 " Formatting and Filetype Fixes
 " =====
