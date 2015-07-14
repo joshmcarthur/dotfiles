@@ -8,7 +8,7 @@
 		".hg",
 		"CVS",
 		".bundle",
-		"tmp/cache",
+		"tmp",
 		".sass-cache",
 		"coverage"
 	],
