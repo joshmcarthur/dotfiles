@@ -1,22 +1,32 @@
-'editor':
-  'fontSize': 16
-  'preferredLineLength': 120
-  'fontFamily': 'Inconsolata'
-'core':
-  'ignoredNames': [
-    '.bundle'
-  ]
-  'audioBeep': false
-  'themes': [
-    'unity-ui'
-    'monokai'
-  ]
-  'projectHome': '/Users/josh/Code'
-'exception-reporting':
-  'userId': '8dc2a034-5c29-efd5-99f5-b27cfd7a357c'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': 'fb0b9d7432d3d90209d7e0e452e3c20f8c5969c2'
-'whitespace':
-  'ensureSingleTrailingNewline': false
+"*":
+  editor:
+    preferredLineLength: 120
+    fontFamily: "Inconsolata"
+    invisibles: {}
+    fontSize: 18
+  core:
+    ignoredNames: [
+      ".bundle"
+      "node_modules"
+      "bower_components"
+    ]
+    audioBeep: false
+    themes: [
+      "seti-ui"
+      "base16-syntax"
+    ]
+    projectHome: "/Users/josh/Code"
+  "exception-reporting":
+    userId: "8dc2a034-5c29-efd5-99f5-b27cfd7a357c"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "fb0b9d7432d3d90209d7e0e452e3c20f8c5969c2"
+  whitespace:
+    ensureSingleTrailingNewline: false
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  "unity-ui": {}
+  "base16-syntax":
+    scheme: "Monokai"
+  "linter-tidy": {}
