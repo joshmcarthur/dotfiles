@@ -4,6 +4,7 @@
 .rbenv-gemsets
 .rbenv_gemsets
 .ruby-version
+.nvmrc
 .chef
 .gradle
 .idea
