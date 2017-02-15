@@ -3,7 +3,6 @@
 .DS_Store
 .rbenv-gemsets
 .rbenv_gemsets
-.ruby-version
 .nvmrc
 .chef
 .gradle
@@ -12,3 +11,7 @@
 .iml
 .iml
 *.iml
+.envrc
+Dockerfile
+docker-compose.yml
+.dockerignore
