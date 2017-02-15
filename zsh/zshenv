@@ -1,8 +1,0 @@
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby $(cat ~/.ruby-version)
-
-export PATH="/opt/chefdk/bin:$PATH"
-
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
