@@ -1,88 +1,25 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+source $HOME/.antigen.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="sudojosh"
+# Load oh-my-zsh library
+antigen use oh-my-zsh
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+# Add bundles
+antigen bundle git
+antigen bundle autojump
+antigen bundle command-not-found
+antigen bundle docker-compose
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+# Local bundles
+antigen bundle $HOME/.dotfiles/zsh plugins/git
+antigen bundle $HOME/.dotfiles/zsh plugins/java
+antigen bundle $HOME/.dotfiles/zsh plugins/go
+antigen bundle $HOME/.dotfiles/zsh plugins/docker-compose-shortcuts
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+# Syntax highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Theme
+antigen theme $HOME/.dotfiles/zsh themes/sudojosh
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
-
-alias gs="git status -sb"
-alias s="python -m SimpleHTTPServer && open http://localhost:8000"
-json() { cat "$*" | python -mjson.tool }
-timesheet() { git log --since $1 --until $2 --author "Josh" --format="format:%Cblue %ai: %Creset %s" }
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github autojump zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-alias gst="git status -sb"
-alias gch="git checkout -b"
-
-# PATH for Homebrew
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
-
-# Load chruby & global Ruby version
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby $(cat ~/.ruby-version)
-
-# Add ChefDK to PATH
-export PATH="/opt/chefdk/bin:$PATH"
-
-# Set Java version to use
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
-
-# Setup nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# Set up direnv
-eval "$(direnv hook zsh)"
-
-# Path to Heroku tools
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Path to Postgres.app
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-
-# My own scripts
-export PATH="$HOME/.dotfiles/bin:$PATH"
-
-# Go
-export GOPATH="$HOME/Code/gocode/"
-export PATH=$PATH:$GOPATH/bin
-
-# Python
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
-# Set my editor to vim
-export EDITOR=vim
-
-# Docker Postgres
-export PGHOST=`dinghy ip`
-export PGUSER=postgres
-
-# Load autojump into ZSH
-[[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
-
-
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
-$(eval dinghy env)
+# Done
+antigen apply
