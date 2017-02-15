@@ -20,48 +20,69 @@ ZSH_THEME="sudojosh"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 alias gs="git status -sb"
-alias s="python -m SimpleHTTPServer"
+alias s="python -m SimpleHTTPServer && open http://localhost:8000"
 json() { cat "$*" | python -mjson.tool }
+timesheet() { git log --since $1 --until $2 --author "Josh" --format="format:%Cblue %ai: %Creset %s" }
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github rails ruby autojump bundler zsh-syntax-highlighting)
+plugins=(git github autojump zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 alias gst="git status -sb"
 alias gch="git checkout -b"
 
-
 # PATH for Homebrew
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
+
+# Load chruby & global Ruby version
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby $(cat ~/.ruby-version)
+
+# Add ChefDK to PATH
+export PATH="/opt/chefdk/bin:$PATH"
+
+# Set Java version to use
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
+
+# Setup nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Set up direnv
+eval "$(direnv hook zsh)"
 
 # Path to Heroku tools
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Path to Postgres.app
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 # My own scripts
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
 # Go
-export GOPATH="$HOME/Code/"
+export GOPATH="$HOME/Code/gocode/"
 export PATH=$PATH:$GOPATH/bin
 
+# Python
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Set my editor to vim
 export EDITOR=vim
+
+# Docker Postgres
+export PGHOST=`dinghy ip`
+export PGUSER=postgres
 
 # Load autojump into ZSH
 [[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
 
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
-source ~/.zshenv
-
+$(eval dinghy env)
