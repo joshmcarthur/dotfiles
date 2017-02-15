@@ -1,0 +1,7 @@
+alias rails='docker-compose run app rails'
+alias rake='docker-compose run app rake'
+alias rspec='docker-compose run app rspec'
+alias bundle='docker-compose run app bundle'
+alias rubocop='docker run --rm -t -v `pwd`:/app joshmcarthur/rubocop' 
+alias aws='docker run --rm -it -v $HOME/.aws:/root/.aws joshmcarthur/aws'
+alias dc='docker-compose'
