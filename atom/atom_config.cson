@@ -1,32 +1,35 @@
 "*":
-  editor:
-    preferredLineLength: 120
-    fontFamily: "Inconsolata"
-    invisibles: {}
-    fontSize: 18
+  "base16-syntax":
+    scheme: "Monokai"
   core:
+    audioBeep: false
     ignoredNames: [
       ".bundle"
       "node_modules"
       "bower_components"
     ]
-    audioBeep: false
-    themes: [
-      "seti-ui"
-      "base16-syntax"
-    ]
     projectHome: "/Users/josh/Code"
+    telemetryConsent: "no"
+  editor:
+    fontFamily: "Inconsolata"
+    fontSize: 17
+    invisibles: {}
+    preferredLineLength: 120
   "exception-reporting":
     userId: "8dc2a034-5c29-efd5-99f5-b27cfd7a357c"
-  welcome:
-    showOnStartup: false
+  linter:
+    showErrorPanel: false
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
+  "linter-tidy": {}
   metrics:
     userId: "fb0b9d7432d3d90209d7e0e452e3c20f8c5969c2"
-  whitespace:
-    ensureSingleTrailingNewline: false
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "unity-ui": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
-  "unity-ui": {}
-  "base16-syntax":
-    scheme: "Monokai"
-  "linter-tidy": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: true
