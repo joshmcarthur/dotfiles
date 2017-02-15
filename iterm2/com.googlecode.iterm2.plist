@@ -1001,13 +1001,13 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>205 106 924 485 0 0 1280 777 </string>
+	<string>942 338 605 485 0 0 2560 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>6 26 1270 746 0 0 1280 777 </string>
+	<string>-638 805 1279 1408 -638 800 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>8 27 1270 1386 0 0 2560 1417 </string>
+	<string>6 4 1270 768 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>-1280 -628 1279 1406 -2560 -640 2560 1418 </string>
 	<key>New Bookmarks</key>
@@ -1745,6 +1745,10 @@
 			<string>/Users/josh</string>
 		</dict>
 	</array>
+	<key>NoSyncTimeOfLastPromo</key>
+	<real>453329943.69026703</real>
+	<key>NoSyncTimeOfLastPromoDownload</key>
+	<real>467585173.39154702</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1811,7 +1815,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-05-07T21:18:49Z</date>
+	<date>2015-10-26T20:46:06Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1847,7 +1851,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Helvetica Neue DeskInterface</string>
+	<string>.AppleSystemUIFont</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -1859,6 +1863,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1</string>
+	<string>2.1.1</string>
 </dict>
 </plist>
