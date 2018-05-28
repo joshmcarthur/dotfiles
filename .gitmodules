@@ -49,3 +49,6 @@
 [submodule "vim/plugins/ctrlp.vim"]
 	path = vim/plugins/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/plugins/vim-code-dark"]
+	path = vim/plugins/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark
