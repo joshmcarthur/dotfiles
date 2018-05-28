@@ -12,6 +12,10 @@
 .iml
 *.iml
 .envrc
+.env.development
 Dockerfile
 docker-compose.yml
 .dockerignore
+.env
+vendor/bundle
+.vscode
