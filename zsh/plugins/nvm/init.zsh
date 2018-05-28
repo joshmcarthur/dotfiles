@@ -1,3 +1,3 @@
 # Setup nvm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source $(/usr/local/bin/brew --prefix nvm)/nvm.sh
