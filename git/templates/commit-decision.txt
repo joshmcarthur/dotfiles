@@ -1,0 +1,8 @@
+# Write a useful commit message here:
+
+# Now provide more information about why you've made this decision:
+In the context of [USE CASE],
+facing [CONCERN]
+we decided for [OPTION]
+to achieve [QUALITY],
+accepting [DOWNSIDES].
