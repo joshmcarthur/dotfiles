@@ -19,6 +19,10 @@
 	smudge = git hawser smudge %f
 	required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
+[alias]
+	giveup = commit --template=/Users/josh/.dotfiles/git/templates/commit-with-downsides.txt
+	commit-decision = commit --template=/Users/josh/.dotfiles/git/templates/commit-decision.txt
