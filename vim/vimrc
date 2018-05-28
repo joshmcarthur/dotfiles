@@ -23,7 +23,7 @@ au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " Automatically strip trailing whitespace on save on all files
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
 
  " Remember last location in file, but not for commit messages.
  "   " see :help last-position-jump
@@ -57,14 +57,14 @@ set autoread
 
 " Airline Settings
 " ====
-let g:airline_theme='dark'
-let g:airline_enable_syntastic=1
+let g:airline_theme='codedark'
+let g:airline#extensions#ale#enabled = 1
 
 " ColorScheme Settings
 " ====
 set t_Co=256 " turn on 256 colors in terminal
-set background=dark
-colorscheme base16-monokai
+" set background=dark
+" colorscheme codedark 
 
 " Ignore File settings
 " ===
@@ -99,5 +99,7 @@ if executable('ag')
   "     .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+let g:ale_linters = {'javascript': ['eslint'], 'html': ['tidy'], 'ruby': ['rubocop']}
 
 set nocompatible
