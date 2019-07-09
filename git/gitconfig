@@ -3,7 +3,7 @@
 	email = joshua.mcarthur@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/josh/.dotfiles/git/gitignore_global
+	excludesfile = $HOME/.dotfiles/git/gitignore_global
 [color]
 	ui = true
 
