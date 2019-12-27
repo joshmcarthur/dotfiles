@@ -19,3 +19,4 @@ docker-compose.yml
 .env
 vendor/bundle
 .vscode
+.tool-versions
