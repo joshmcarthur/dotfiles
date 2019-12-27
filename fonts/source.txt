@@ -1,0 +1,11 @@
+Original Hack font:
+
+https://github.com/source-foundry/Hack
+
+Project that adds Ligatures from Fira Code:
+
+https://github.com/ToxicFrog/Ligaturizer
+
+Fira Code:
+
+https://github.com/tonsky/FiraCode
