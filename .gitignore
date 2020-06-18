@@ -2,3 +2,4 @@ Gist.sublime-settings
 bin/ngrok
 bin/priv/**/*
 ruby/bundler-config/cache
+bin/jira
