@@ -13,6 +13,7 @@ antigen bundle $HOME/.dotfiles/zsh plugins/curl
 antigen bundle $HOME/.dotfiles/zsh plugins/asdf
 antigen bundle $HOME/.dotfiles/zsh plugins/tmuxinator
 antigen bundle $HOME/.dotfiles/zsh plugins/macbuntu
+antigen bundle $HOME/.dotfiles/zsh plugins/bat
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -63,4 +64,11 @@ export PATH="$HOME/.dotfiles/bin:$PATH"
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /home/josh/.nvm/versions/node/v10.16.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/josh/.nvm/versions/node/v10.16.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+alias gs=gst
+
+eval "$(starship init zsh)"
 
