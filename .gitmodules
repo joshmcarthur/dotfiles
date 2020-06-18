@@ -52,3 +52,6 @@
 [submodule "vim/plugins/vim-code-dark"]
 	path = vim/plugins/vim-code-dark
 	url = https://github.com/tomasiser/vim-code-dark
+[submodule "linux/pause-on-lock"]
+	path = linux/pause-on-lock
+	url = https://github.com/folixg/pause-on-lock
