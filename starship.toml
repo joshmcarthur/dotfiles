@@ -1,4 +1,3 @@
-
 # Replace the "❯" symbol in the prompt with "➜"
 [character]      # The name of the module we are configuring is "character"
 symbol = "▶"     # The "symbol" segment is being set to "➜"
@@ -15,3 +14,12 @@ symbol = ""
 [ruby]
 prefix = "using "
 symbol = "Ruby-"
+
+[custom.watson]
+command=""" echo "$(watson status -p) ($(watson status -e))" """
+style="bold italic blue"
+symbol=" 🏢 "
+description = "Shows the current task using Watson"
+when = """ watson status | grep -qv "No project started." """
+
+
