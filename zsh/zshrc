@@ -27,27 +27,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Autocompletion
 antigen bundle zsh-users/zsh-autosuggestions
 
-# Theme
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
-
-
 # Done
 antigen apply
-
-SPACESHIP_CHAR_SYMBOL="▶ "
-
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stamps section
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git_branch
-  exec_time     # Execution time
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
 
 export PGHOST=localhost
 export PGUSER=postgres
