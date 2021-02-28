@@ -15,5 +15,5 @@
 # you might be a co-worker to check out your copy of an application to
 # help diagnose an issue, etc.
 
-ip=`ipconfig getifaddr en0`
-echo $ip
+echo $(hostname -I | awk '{print $1}')
+
