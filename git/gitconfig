@@ -28,3 +28,5 @@
 	commit-decision = commit --template=/Users/josh/.dotfiles/git/templates/commit-decision.txt
 [help]
 	autocorrect = 1
+[init]
+	defaultBranch = main
