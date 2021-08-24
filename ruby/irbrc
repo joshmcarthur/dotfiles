@@ -1,3 +1,11 @@
 require 'irb/completion'
 require 'pp'
 IRB.conf[:AUTO_INDENT]=true
+
+def save
+  Kernel.at_exit do
+    File.open("irb.log", "w") do |f|
+      f << Readline::HISTORY.to_a.join("\n")
+    end
+  end
+end
