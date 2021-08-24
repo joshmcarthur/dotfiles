@@ -1,0 +1,71 @@
+{
+    "editor.renderWhitespace": "all",
+    "vim.useCtrlKeys": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "ruby.lintDebounceTime": 2000,
+    "editor.tabSize": 8,
+    "C_Cpp.updateChannel": "Insiders",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontFamily": "'Liga Hack', monospace",
+    "emmet.includeLanguages": {"erb": "html"},
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic",
+                }
+            }
+        ]
+    },
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Cobalt Next Minimal",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.watcherExclude": {
+        "**/vendor/**": true
+    },
+    "dart.flutterSdkPath": "/home/josh/.flutter-sdk",
+    "prettier.printWidth": 120,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.lineHeight": 25,
+    "editor.fontSize": 15,
+    "editor.cursorWidth": 3,
+    "editor.cursorBlinking": "solid",
+    "files.trimTrailingWhitespace": true,
+    "editor.lineNumbers": "on",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+    "window.zoomLevel": 2,
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "redhat.telemetry.enabled": false
+}
