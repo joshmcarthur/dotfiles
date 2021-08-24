@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Checking out Gemfile.lock from HEAD..."
+git checkout HEAD -- Gemfile.lock
+
+echo "Running 'bundle install'"
+bundle install
