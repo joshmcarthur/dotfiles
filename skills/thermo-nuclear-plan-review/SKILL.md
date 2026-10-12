@@ -20,6 +20,14 @@ A complete specification of the wrong architecture is still the wrong architectu
 
 **Not this skill:** the change is already in a branch → `thermo-nuclear-code-quality-review`. Whether the *product* objective is worth doing. Drafting a plan from scratch (`writing-plans`) — run this *after* a draft exists.
 
+## Quick Reference
+
+| Verdict | When |
+|---------|------|
+| `Approve` | The plan *is* the judo: existing seam, no new subsystem |
+| `Request changes` | Shape is right; fix details (tests, paths, a missing call) |
+| `Reject and reframe` | Shape is wrong; do **not** specify the overbuild |
+
 ## Core Prompt
 
 > Review this plan as a proposed change against the current codebase.
@@ -136,6 +144,13 @@ If those fail, `Reject and reframe` (wrong shape) or `Request changes` (right sh
 | "Approve with nits so they can start" | Starting the wrong plan is more expensive than an awkward standup. |
 | "Don't touch load-bearing X this sprint" | Extending X's extension point ≠ rewriting X. Bypassing X *is* a design change. |
 | "I already told them the plan was ready" | Correcting it now is cheaper than an intern implementing it. |
+
+## Common Mistakes
+
+- Reviewing the plan as a document (TDD, placeholders, intern-executability) while it adds a subsystem
+- Saying `Request changes` or "needs more detail" when you mean `Reject and reframe`
+- Keeping a trimmed platform as a compromise
+- Expanding a correct one-seam plan so it looks more complete
 
 ## Red Flags — STOP and reframe
 
