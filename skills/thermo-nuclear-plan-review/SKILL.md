@@ -5,7 +5,7 @@ description: Use when reviewing an implementation plan, proposed change, design-
 
 # Thermo-Nuclear Plan Review
 
-Same maintainability bar as `thermo-nuclear-code-quality-review`, applied to a **proposed** change rather than an enacted diff.
+Same maintainability bar as [thermo-nuclear-code-quality-review](https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md) (Cursor Team Kit): an unusually strict review of an **enacted diff** for code judo, files crossing ~1k lines, spaghetti branching, and canonical-layer leaks. This skill applies that bar to a **proposed** change before anyone writes it.
 
 The job is not "is this plan thorough enough to execute?" The job is: **is this the focused, succinct change that achieves the objective, or is there a code-judo move that deletes most of the plan?**
 
@@ -18,7 +18,7 @@ A complete specification of the wrong architecture is still the wrong architectu
 - You wrote the plan and need a gate before handing it off (sunk-cost self-review)
 - Someone asks whether the plan is overbuilt, under-engineered, or missing a smaller path through existing code
 
-**Not this skill:** the change is already in a branch → `thermo-nuclear-code-quality-review`. Whether the *product* objective is worth doing. Drafting a plan from scratch (`writing-plans`) — run this *after* a draft exists.
+**Not this skill:** the change is already in a branch → [thermo-nuclear-code-quality-review](https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md). Whether the *product* objective is worth doing. Drafting a plan from scratch (`writing-plans`) — run this *after* a draft exists.
 
 ## Quick Reference
 
