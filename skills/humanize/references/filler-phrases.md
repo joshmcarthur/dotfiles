@@ -18,5 +18,10 @@ AI pads sentences with unnecessary words.
 | It is important to note that the data shows | The data shows |
 | At its core | [delete] |
 | When it comes to | [delete or rephrase] |
+| Note that / Please note | [delete] |
+| Under the hood / Behind the scenes | [delete, then say what happens] |
+| At a high level | [delete] |
+| Go ahead and give me the path | Give me the path |
+| We made a decision to ship | We decided to ship |
 
 **Fix:** Read each sentence and ask: can I say this in fewer words?

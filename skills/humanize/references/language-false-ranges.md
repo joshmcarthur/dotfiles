@@ -14,6 +14,6 @@ AI uses "from X to Y" constructions where X and Y aren't on a meaningful scale.
 **Human alternative:**
 > The book covers the Big Bang, star formation, and current theories about dark matter.
 
-**Pattern to watch:** "From X to Y" should represent a real spectrum or progression, not just two related things.
+**Pattern to watch:** "From X to Y" should represent a real spectrum or progression, not just two related things. Also watch the fake audience split: "whether you're a solo developer or part of a large enterprise team". That is two labels, not a range. Name the actual reader, or drop the split.
 
 **Fix:** Replace the range with a simple list (“covers X, Y, and Z”) or a true progression.

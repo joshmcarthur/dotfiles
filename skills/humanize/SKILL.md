@@ -5,7 +5,7 @@ description: Reviews and edits copy to remove AI-generated patterns and make tex
 
 # Humanize
 
-Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia's "Signs of AI writing" guide, updated with 2026 findings from The Economist's LLM-vs-human prose study. Contains 31 rules across 6 categories.
+Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia's "Signs of AI writing" guide, updated with 2026 findings from The Economist's LLM-vs-human prose study, plus tells from Vale Voices and vale-llm-slop. Contains 38 rules across 6 categories.
 
 ## When to Apply
 
@@ -23,16 +23,17 @@ Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia
 - Keep genre and audience intact (e.g., neutral encyclopedic tone vs. personal essay). Use `voice-soul` only when that voice fits.
 - Don't rewrite quoted material unless the user asked to rewrite the quote itself.
 - Don't cluster em dashes. A single dash is fine; a string of them still reads as Claude. Prefer commas, periods, or parentheses when thinning dash-heavy copy.
+- If a sentence could move unchanged to another company, product, or country, it is filler. Replace it with a mechanism, a number, or a judgment that only fits here.
 - **Don't introduce new AI patterns.** Your rewrite must pass the same rules you're applying. Common traps: "Here's the thing:", "It's not about X, it's about Y", formulaic hooks that try to sound casual, long `and`-chains, Latinate padding (`significant`, `methodology`).
 
 ## Rule Categories
 
 | Category | Impact | Prefix | Rules |
 |----------|--------|--------|-------|
-| Content | HIGH | `content-` | 6 |
-| Language | HIGH | `language-` | 8 |
-| Style | MEDIUM | `style-` | 8 |
-| Communication | HIGH | `comm-` | 3 |
+| Content | HIGH | `content-` | 8 |
+| Language | HIGH | `language-` | 10 |
+| Style | MEDIUM | `style-` | 10 |
+| Communication | HIGH | `comm-` | 4 |
 | Filler | MEDIUM | `filler-` | 5 |
 | Voice | HIGH | `voice-` | 1 |
 
@@ -46,6 +47,8 @@ Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia
 - `content-promotional` — Cut "nestled", "vibrant", "breathtaking"
 - `content-vague-attribution` — Replace "experts say" with specific sources
 - `content-challenges` — Remove formulaic "Despite challenges..." sections
+- `content-self-praise` — Cut "ensures correctness", "handles gracefully"
+- `content-vague-reasons` — Replace "for various reasons" with the actual cause
 
 ### Language (HIGH)
 
@@ -57,6 +60,8 @@ Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia
 - `language-rule-of-three` — Don't force ideas into groups of three
 - `language-synonym-cycling` — Stop cycling through synonyms
 - `language-false-ranges` — Fix fake "from X to Y" constructions
+- `language-metaphor` — Replace analogy ("think of this as") with mechanism
+- `language-empty-qualifiers` — Cut "the appropriate", "as needed" padding
 
 ### Style (MEDIUM)
 
@@ -68,12 +73,15 @@ Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia
 - `style-emojis` — Remove decorative emojis
 - `style-curly-quotes` — Use straight quotes
 - `style-rhythm` — Vary sentence/paragraph cadence
+- `style-templated-headers` — Cut "Why X Matters", "Key Takeaways" titles
+- `style-colon-reveal` — Rewrite "The answer: it works" as a sentence
 
 ### Communication (HIGH)
 
 - `comm-artifacts` — Remove "I hope this helps!", "Let me know if..."
 - `comm-cutoff` — Remove "as of my last update" disclaimers
 - `comm-sycophantic` — Cut "Great question!", "You're absolutely right!"
+- `comm-process-narration` — Cut "Let me check", "I can see that", "I should mention"
 
 ### Filler (MEDIUM)
 
@@ -146,4 +154,4 @@ Provide:
 
 ## Reference
 
-Based on [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and The Economist, [How to spot AI writing](https://www.economist.com/culture/2026/07/30/how-to-spot-ai-writing) (30 Jul 2026). Live overused-word lists: [AI Word Explorer](https://www.aiwordexplorer.com/).
+Based on [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and The Economist, [How to spot AI writing](https://www.economist.com/culture/2026/07/30/how-to-spot-ai-writing) (30 Jul 2026). Live overused-word lists: [AI Word Explorer](https://www.aiwordexplorer.com/). Extra tells from [Vale Voices](https://github.com/jdkato/voices) and [vale-llm-slop](https://github.com/Syntaf/vale-llm-slop) (MIT).

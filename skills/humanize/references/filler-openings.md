@@ -14,9 +14,9 @@ AI often starts with generic scene-setting or rhetorical hooks.
 **Human alternative:**
 > Teams are under pressure to ship faster.
 
-**Words to watch:** In today's fast-paced world, In today's digital world, In the ever-evolving landscape, In the realm of, Have you ever wondered, Picture this, Let's dive into, As we embark on this journey, Here's the thing, Here's the deal, The truth is, The reality is, Let me be clear, Look, The thing is
+**Words to watch:** In today's fast-paced world, In today's digital world, In the ever-evolving landscape, In the realm of, Have you ever wondered, Picture this, Let's dive into, As we embark on this journey, Here's the thing, Here's the deal, The truth is, The reality is, Let me be clear, Look, The thing is, I'll be honest, the uncomfortable truth is, what most people get wrong, here's what nobody tells you, the part everyone misses, this is the part most people skip, what this means is, in this article/post/section
 
-Also watch for the preface-with-a-colon version: "Here's the thing:", "The thing is:", "Look:".
+Also watch for the preface-with-a-colon version: "Here's the thing:", "The thing is:", "Look:". The last four "nobody tells you" openers flatter the writer as the lone expert who noticed.
 
 **Fix:** Delete the prefatory throat-clearing and start with the first real claim.
 
