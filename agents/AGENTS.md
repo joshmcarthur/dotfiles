@@ -25,45 +25,16 @@ Wait for explicit approval before writing any code. An explicit affirmative sele
 
 ## Decisions and durable context
 
-Use git-lore (`refs/lore/<work-id>`) for context that must outlive a session but must not live in the working tree. Use the create-lore, read-lore, edit-lore and sync-lore skills.
+Use git-lore for plans, reference docs and other context that must outlive a session but must not live in the working tree. Record significant decisions as ADRs when the project has `docs/adr/`, and in the Lore Work's `decisions.md` when it does not.
 
-- Before planning, look for an existing Lore Work (`git config branch.<branch>.lore`, `git for-each-ref refs/lore`). If one exists, read it first.
-- After a plan is approved, record it as `plan.md` in the branch's Lore Work. Create the Work if none exists. Skip this for work that fits in one commit.
-- At each commit boundary and phase break, update `plan.md`, and `handoff.md` if the work will continue in another session.
-- Put temporary plans, reference docs and investigation notes in lore, not in the working tree or `tmp/`, so they survive builds, cleans and branch switches.
-- Apply the lore curation test: would a future developer or agent otherwise have to rediscover this? Do not record conversation or activity logs.
-- Do not push lore (sync-lore) without asking.
+## Situational instructions
 
-### Where significant decisions go
+Some instructions apply only at certain moments. When a trigger below matches, read the file before you act. Do not work from memory of an earlier read.
 
-A decision is significant if it involves choosing between approaches, introducing a new dependency, establishing a new pattern, or making a trade-off with future consequences. Minor implementation details do not need a record.
-
-- **Project has `docs/adr/`:** record the decision as an ADR (format below). Lore still holds plans and reference docs. Link to the ADR from lore. Do not copy its content.
-- **Project has no `docs/adr/`:** record the decision in the Lore Work's `decisions.md`, with the same Context / Decision / Rationale / Consequences headings. Do not create `docs/adr/`.
-
-Record the decision before implementing it.
-
-ADR format:
-```markdown
-# ADR-NNN: Title
-
-**Status:** Accepted
-**Date:** YYYY-MM
-
-## Context
-What situation or requirement prompted this decision.
-
-## Decision
-What was decided.
-
-## Rationale
-Why this option was chosen over the alternatives, including a summary of trade-offs.
-
-## Consequences
-What this decision makes easier or harder going forward.
-```
-
-Number ADRs sequentially after the highest existing ADR, and include the ADR in the same commit as the initial implementation.
+- Before you plan work in a git repository, and at each commit boundary or phase break: read `~/.dotfiles/agents/instructions/lore.md`
+- Before you record a significant decision: read `~/.dotfiles/agents/instructions/decision-records.md`
+- Before you create a pull request, or change its title or body: read `~/.dotfiles/agents/instructions/pull-requests.md`
+- Before you add or change global agent instructions in `~/.dotfiles/agents/`: read `~/.dotfiles/agents/instructions/adding-instructions.md`
 
 ## Commit boundaries
 
