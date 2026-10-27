@@ -36,7 +36,7 @@ Some instructions apply only at certain moments. When a trigger below matches, r
 - Before you record a significant decision: read `~/.dotfiles/agents/instructions/decision-records.md`
 - Before you create a pull request, or change its title or body: read `~/.dotfiles/agents/instructions/pull-requests.md`
 - Before you add or change global agent instructions in `~/.dotfiles/agents/`: read `~/.dotfiles/agents/instructions/adding-instructions.md`
-- Before you present a plan that creates any file or adds a dependency: read `~/.dotfiles/skills/thermo-nuclear-plan-review/SKILL.md`, review the plan against it, and put the verdict on one line in the plan
+- Before you present a plan that creates any file or adds a dependency: read `~/.dotfiles/agents/skills/thermo-nuclear-plan-review/SKILL.md`, review the plan against it, and put the verdict on one line in the plan
 
 ## Commit boundaries
 
