@@ -11,3 +11,9 @@ ln -sf $HOME/.dotfiles/zsh/sudojosh.zsh-theme $HOME/.oh-my-zsh/themes/sudojosh.z
 ln -sf $HOME/.dotfiles/vim/gvimrc $HOME/.gvimrc
 ln -sf $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 ln -sf $HOME/.dotfiles/vim/plugins $HOME/.vim/bundle
+
+mkdir -p $HOME/.claude $HOME/.codex $HOME/.copilot $HOME/.cursor/rules
+ln -sfn $HOME/.dotfiles/agents/AGENTS.md $HOME/.claude/CLAUDE.md
+ln -sfn $HOME/.dotfiles/agents/AGENTS.md $HOME/.codex/AGENTS.md
+ln -sfn $HOME/.dotfiles/agents/AGENTS.md $HOME/.copilot/copilot-instructions.md
+ln -sfn $HOME/.dotfiles/agents/AGENTS.md $HOME/.cursor/rules/agents.mdc
