@@ -57,6 +57,10 @@ Do not commit without being asked to. When asked to commit:
   - If no issues are found, note that briefly and proceed
 - Do not use `--no-verify` or skip hooks
 
+## Posting on my behalf
+
+When you post a comment or reply under my account (for example a GitHub PR review comment, PR conversation comment or issue comment), start the text with 🤖 followed by a space.
+
 ## Staying on plan
 
 If a decision not covered by the approved plan comes up mid-implementation, stop and flag it rather than making a silent choice. Paste the relevant plan section if context is needed. The approved plan is a contract — deviations require explicit sign-off.
