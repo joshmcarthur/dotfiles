@@ -15,6 +15,7 @@ The plan must include:
 - List of files to be created or modified
 - Identified commit boundaries (logical, working slices)
 - Any trade-offs or alternatives considered
+- The existing code, helpers or framework features the change reuses, and any smaller approach considered
 
 After presenting the plan, use the client's interactive question tool when available (for example, `vscode_askQuestions` in VS Code) to request approval in the chat UI. Offer these single-select options and allow free-text feedback:
 - "Yes, approved": approve the presented plan and proceed with implementation.
@@ -35,6 +36,7 @@ Some instructions apply only at certain moments. When a trigger below matches, r
 - Before you record a significant decision: read `~/.dotfiles/agents/instructions/decision-records.md`
 - Before you create a pull request, or change its title or body: read `~/.dotfiles/agents/instructions/pull-requests.md`
 - Before you add or change global agent instructions in `~/.dotfiles/agents/`: read `~/.dotfiles/agents/instructions/adding-instructions.md`
+- Before you present a plan that creates any file or adds a dependency: read `~/.dotfiles/skills/thermo-nuclear-plan-review/SKILL.md`, review the plan against it, and put the verdict on one line in the plan
 
 ## Commit boundaries
 
@@ -62,6 +64,10 @@ If a decision not covered by the approved plan comes up mid-implementation, stop
 ## Scope discipline
 
 Only make changes that are directly required by the plan. Do not refactor surrounding code, add comments, improve formatting, or introduce abstractions unless specifically asked. A focused change is easier to review and safer to commit.
+
+- Resist bloat. Aim for the least new surface area that meets the objective: files, layers, dependencies, flags. Small does not mean fewest edits. Extend the existing abstraction rather than going around it. Do not drop error handling or security checks to stay small.
+- Look for the code-judo move first: use what the framework, codebase or platform already provides.
+- Weigh each test before adding it. State in one line what it would catch. A bug fix gets a test that fails before the fix. Prefer extending an existing test. Follow the project's test conventions. If you skip tests, say why in the commit-boundary summary.
 
 ## Phase breaks for large features
 
