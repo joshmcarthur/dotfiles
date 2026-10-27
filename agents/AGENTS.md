@@ -23,11 +23,25 @@ After presenting the plan, use the client's interactive question tool when avail
 
 Wait for explicit approval before writing any code. An explicit affirmative selection counts as approval; a skipped or dismissed question does not. If the question tool is unavailable, request typed approval ("approved", "proceed", "looks good"). Plan approval does not authorize commits or bypass later approval gates.
 
-## Architectural Decision Records
+## Decisions and durable context
 
-If the project contains a `docs/adr/` directory, record significant architectural decisions there as ADR files.
+Use git-lore (`refs/lore/<work-id>`) for context that must outlive a session but must not live in the working tree. Use the create-lore, read-lore, edit-lore and sync-lore skills.
 
-An architectural decision is significant if it involves choosing between approaches, introducing a new dependency, establishing a new pattern, or making a trade-off with future consequences. Minor implementation details do not need an ADR.
+- Before planning, look for an existing Lore Work (`git config branch.<branch>.lore`, `git for-each-ref refs/lore`). If one exists, read it first.
+- After a plan is approved, record it as `plan.md` in the branch's Lore Work. Create the Work if none exists. Skip this for work that fits in one commit.
+- At each commit boundary and phase break, update `plan.md`, and `handoff.md` if the work will continue in another session.
+- Put temporary plans, reference docs and investigation notes in lore, not in the working tree or `tmp/`, so they survive builds, cleans and branch switches.
+- Apply the lore curation test: would a future developer or agent otherwise have to rediscover this? Do not record conversation or activity logs.
+- Do not push lore (sync-lore) without asking.
+
+### Where significant decisions go
+
+A decision is significant if it involves choosing between approaches, introducing a new dependency, establishing a new pattern, or making a trade-off with future consequences. Minor implementation details do not need a record.
+
+- **Project has `docs/adr/`:** record the decision as an ADR (format below). Lore still holds plans and reference docs. Link to the ADR from lore. Do not copy its content.
+- **Project has no `docs/adr/`:** record the decision in the Lore Work's `decisions.md`, with the same Context / Decision / Rationale / Consequences headings. Do not create `docs/adr/`.
+
+Record the decision before implementing it.
 
 ADR format:
 ```markdown
@@ -49,7 +63,7 @@ Why this option was chosen over the alternatives, including a summary of trade-o
 What this decision makes easier or harder going forward.
 ```
 
-Number sequentially after the highest existing ADR. Write the ADR before implementing the decision, and include it in the same commit as the initial implementation.
+Number ADRs sequentially after the highest existing ADR, and include the ADR in the same commit as the initial implementation.
 
 ## Commit boundaries
 
