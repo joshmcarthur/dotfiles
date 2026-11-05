@@ -5,7 +5,7 @@ description: Reviews and edits copy to remove AI-generated patterns and make tex
 
 # Humanize
 
-Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia's "Signs of AI writing" guide, updated with 2026 findings from The Economist's LLM-vs-human prose study, plus tells from Vale Voices and vale-llm-slop. Contains 38 rules across 6 categories.
+Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia's "Signs of AI writing" guide, updated with 2026 findings from The Economist's LLM-vs-human prose study, plus tells from Vale Voices and vale-llm-slop. Contains 39 rules across 6 categories.
 
 ## When to Apply
 
@@ -24,7 +24,7 @@ Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia
 - Don't rewrite quoted material unless the user asked to rewrite the quote itself.
 - Don't cluster em dashes. A single dash is fine; a string of them still reads as Claude. Prefer commas, periods, or parentheses when thinning dash-heavy copy.
 - If a sentence could move unchanged to another company, product, or country, it is filler. Replace it with a mechanism, a number, or a judgment that only fits here.
-- **Don't introduce new AI patterns.** Your rewrite must pass the same rules you're applying. Common traps: "Here's the thing:", "It's not about X, it's about Y", formulaic hooks that try to sound casual, long `and`-chains, Latinate padding (`significant`, `methodology`).
+- **Don't introduce new AI patterns.** Your rewrite must pass the same rules you're applying. Common traps: "Here's the thing:", "It's not about X, it's about Y", formulaic hooks that try to sound casual, long `and`-chains, Latinate padding (`significant`, `methodology`), and paragraphs of stacked short declarative sentences (`style-staccato-stack`).
 
 ## Rule Categories
 
@@ -32,7 +32,7 @@ Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia
 |----------|--------|--------|-------|
 | Content | HIGH | `content-` | 8 |
 | Language | HIGH | `language-` | 10 |
-| Style | MEDIUM | `style-` | 10 |
+| Style | MEDIUM | `style-` | 11 |
 | Communication | HIGH | `comm-` | 4 |
 | Filler | MEDIUM | `filler-` | 5 |
 | Voice | HIGH | `voice-` | 1 |
@@ -73,6 +73,7 @@ Review and edit copy to remove signs of AI-generated writing. Based on Wikipedia
 - `style-emojis` — Remove decorative emojis
 - `style-curly-quotes` — Use straight quotes
 - `style-rhythm` — Vary sentence/paragraph cadence
+- `style-staccato-stack` — Merge runs of short one-liner sentences (common over-humanize tell)
 - `style-templated-headers` — Cut "Why X Matters", "Key Takeaways" titles
 - `style-colon-reveal` — Rewrite "The answer: it works" as a sentence
 

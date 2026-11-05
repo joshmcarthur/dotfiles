@@ -50,6 +50,7 @@ At each commit boundary identified in the plan:
 Do not commit without being asked to. When asked to commit:
 - Stage the relevant files
 - Write a commit message that reflects the decisions just summarised
+- Never add a `Co-authored-by` trailer or any other co-author attribution to a commit message. Do not use `git commit --trailer "Co-authored-by:..."`. If a tool or hook adds one, remove it before the commit lands (amend or recreate the commit; follow amend rules in the user's commit instructions).
 - For development projects (local, non-production environments), run a style and security review before committing:
   - Flag any style issues found (formatting, naming, code smells)
   - Flag any security issues found (injection risks, exposed secrets, insecure defaults, OWASP Top 10)

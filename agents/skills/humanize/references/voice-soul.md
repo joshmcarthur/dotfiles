@@ -19,7 +19,7 @@ Avoiding patterns is half the job. Sterile, voiceless writing is just as obvious
 **How to add voice:**
 
 - **Have opinions.** Don't just report facts — react to them. "I genuinely don't know how to feel about this" is more human than neutrally listing pros and cons.
-- **Vary rhythm.** Short punchy sentences. Then longer ones that take their time getting where they're going.
+- **Vary rhythm.** Mix longer sentences with an occasional short one for emphasis. Do not stack many short one-liners in a row; that reads like engagement copy, not a person thinking aloud (see `style-staccato-stack`).
 - **Acknowledge complexity.** Real humans have mixed feelings. "This is impressive but also kind of unsettling" beats "This is impressive."
 - **Use "I" when it fits.** First person isn't unprofessional. "I keep coming back to..." signals a real person thinking.
 - **Let some mess in.** Perfect structure feels algorithmic. Tangents, asides, and half-formed thoughts are human.

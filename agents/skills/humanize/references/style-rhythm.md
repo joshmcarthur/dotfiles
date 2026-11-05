@@ -14,6 +14,9 @@ AI writing often has an overly even cadence: similar sentence lengths, similar s
 **Human alternative:**
 > The tool reduces latency and improves accuracy. Integration is straightforward, but reliability is the real win. You notice it after a week in production.
 
-**Pattern to watch:** Repeated sentence openers, uniform sentence length, and paragraphs with identical shape. Current models also avoid short punchy sentences; a paragraph of long, even clauses is a tell even when vocabulary is clean.
+**Pattern to watch:** Repeated sentence openers, uniform sentence length, and paragraphs with identical shape. Two failure modes:
 
-**Fix:** Combine or split sentences to change cadence. Vary sentence openers. Mix short sentences with longer ones. Use occasional one-line paragraphs when it fits. If the problem is missing commas/`and`-chains rather than even cadence, see `style-punctuation-sparsity`.
+1. **Even long clauses** — one `and`-chain after another (common in raw model output).
+2. **Stacked one-liners** — many short declarative sentences in a row (common after humanizing). See `style-staccato-stack`.
+
+**Fix:** Combine or split sentences to change cadence. Vary sentence openers. Mix short sentences with longer ones; one punchy line is fine, a paragraph of them is not. Use occasional one-line paragraphs when it fits. If the problem is missing commas/`and`-chains rather than even cadence, see `style-punctuation-sparsity`.
